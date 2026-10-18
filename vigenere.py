@@ -1,6 +1,6 @@
 EN_LOWER = "abcdefghijklmnopqrstuvwxyz"
 EN_UPPER = EN_LOWER.upper()
-RU_LOWER = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
+RU_LOWER = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 RU_UPPER = RU_LOWER.upper()
 
 
@@ -9,7 +9,7 @@ def _get_alphabets(char: str):
     if char in EN_LOWER or char in EN_UPPER:
         return (EN_LOWER, 26) if char.islower() else (EN_UPPER, 26)
     if char in RU_LOWER or char in RU_UPPER:
-        return (RU_LOWER, 32) if char.islower() else (RU_UPPER, 32)
+        return (RU_LOWER, 33) if char.islower() else (RU_UPPER, 33)
     return None, 0
 
 
@@ -17,7 +17,7 @@ def _shift_char(char: str, shift: int) -> str:
     """Сдвигает букву на shift позиций внутри её алфавита."""
     alphabet, size = _get_alphabets(char)
     if alphabet is None:
-        return char  # не буква — возвращаем как есть
+        return char
     idx = alphabet.index(char)
     return alphabet[(idx + shift) % size]
 

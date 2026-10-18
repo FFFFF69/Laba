@@ -1,1 +1,7 @@
-*.pem
+__pycache__/
+*.pyc
+secret.key
+secret.txt
+secret.txt.bak
+*.enc
+.pytest_cache/

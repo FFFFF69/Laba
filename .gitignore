@@ -5,4 +5,3 @@ secret.txt
 secret.txt.bak
 *.enc
 .pytest_cache/
-

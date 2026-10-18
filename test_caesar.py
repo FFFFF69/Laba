@@ -38,6 +38,6 @@ if __name__ == "__main__":
     test_encrypt_decrypt_en()
     test_non_letters_unchanged()
     test_shift_zero()
-    test_shift_full_alphabet()
-    test_yo_letter()
+    test_shift_full_alphabet()#добавил
+    test_yo_letter()#добавил
     print("Все тесты пройдены")
